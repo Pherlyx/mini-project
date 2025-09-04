@@ -1,0 +1,168 @@
+.confirmation-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success-icon-container {
+  margin-bottom: 24px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: #4caf50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.success-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.success-messages {
+  margin-bottom: 32px;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.success-subtitle {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.4;
+}
+
+.event-details-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 40px;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.primary-btn {
+  background: #333;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn {
+  background: white;
+  color: #333;
+  border: 2px solid #e1e5e9;
+}
+
+.secondary-btn:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+  transform: translateY(-2px);
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+  .confirmation-container {
+    padding: 32px 16px;
+  }
+  
+  .success-title {
+    font-size: 24px;
+  }
+  
+  .success-message {
+    font-size: 15px;
+  }
+  
+  .success-subtitle {
+    font-size: 13px;
+  }
+  
+  .event-details-card {
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+  
+  .detail-label,
+  .detail-value {
+    font-size: 13px;
+  }
+  
+  .action-buttons {
+    gap: 10px;
+  }
+  
+  .action-btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+} 
