@@ -32,12 +32,7 @@ export const sendWelcomeEmail = async (user, verificationToken) => {
     html: `
       <h1>Welcome, ${user.firstName} ${user.lastName}!</h1>
        <p>Thank you for joining ${SYSTEM_NAME}, the platform for planning your events!</p>
-       <p>Please verify your email address to activate your account:</p>
-      <a href="${verificationLink}" style="background-color: #1976D2; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Verify Email</a>
-      <p>If the button above doesn't work, copy and paste this link into your browser:</p> 
-      <p>${verificationLink}</p>
-      <p style="color: #1976D2;">Happy planning!</p>
-      
+       <p style="color: #1976D2;">Happy planning!</p>
     `,
   };
 
