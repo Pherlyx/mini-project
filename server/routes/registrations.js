@@ -1,6 +1,7 @@
 import express from 'express';
 const router = express.Router();
 import { v4 as uuidv4 } from 'uuid';
+import { events } from '../data/events.js';
 
 // Mock registrations data
 let registrations = [
@@ -76,17 +77,19 @@ router.get('/:id', (req, res) => {
 router.post('/payment-summary', (req, res) => {
   const { eventId } = req.body;
   
-  // Mock event data (in real app, fetch from events API)
-  const event = {
-    id: eventId,
-    title: 'Tech Conference 2025',
-    price: 299
-  };
+  // Find the event by ID from imported events
+  const event = events.find(e => e.id === eventId);
   
-  const serviceFee = 9.99;
+  if (!event) {
+    return res.status(404).json({ message: 'Event not found' });
+  }
+  
+  // Only apply service fee for paid events
+  const serviceFee = event.price > 0 ? 9.99 : 0;
   const total = event.price + serviceFee;
   
   res.json({
+    eventTitle: event.title,
     eventTicket: event.price,
     serviceFee,
     total
